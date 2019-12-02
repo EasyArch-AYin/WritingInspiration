@@ -14,7 +14,7 @@ class BookGetter {
     private String title;
     private String content;
     private String nextChapter;
-    private String filename = "./xxx.txt";
+    private String filename = "./Article1.txt";
     /*
     构造函数传参
      */

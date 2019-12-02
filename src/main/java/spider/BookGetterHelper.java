@@ -5,7 +5,7 @@ import java.io.IOException;
 class BookGetterHelper {
     static void getBook() throws Exception {
         BookGetter bookGetter = new BookGetter(
-                "http://book.zongheng.com/chapter/389811/6495763.html",
+                "http://book.zongheng.com/chapter/114637/2067307.html",
                 ".title_txtbox",
                 "p",
                 "a.nextchapter",
