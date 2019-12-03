@@ -3,6 +3,7 @@ package writinginspiration.pojo;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -17,7 +18,8 @@ public class Article {
     @Id
     private int id;
     private String title;
-    private String content;
+    @Column(columnDefinition = "mediumtext")
+    private String context;
     private int e_id;
     private Timestamp create_Time;
     private Timestamp update_Time;

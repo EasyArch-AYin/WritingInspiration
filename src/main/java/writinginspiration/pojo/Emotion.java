@@ -16,7 +16,7 @@ import java.sql.Timestamp;
 public class Emotion {
     @Id
     private int e_id;
-    private String content;
+    private String context;
     private Timestamp create_Time;
     private Timestamp update_Time;
 }
