@@ -8,6 +8,6 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 public class BookApplication {
     public static void main(String[] args) {
 //        new SpringApplicationBuilder(BookApplication.class).web(true).run(args);
-        SpringApplication.run(BookApplication.class,args);
+        SpringApplication. run(BookApplication.class,args);
     }
 }

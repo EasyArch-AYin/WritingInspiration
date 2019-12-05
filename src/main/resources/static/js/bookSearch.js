@@ -4,4 +4,5 @@ $("#bookSearch2").bind('click',function () {
 
 function f() {
     var msg = $("#Search_box").val();
+    alert("wy")
 }
