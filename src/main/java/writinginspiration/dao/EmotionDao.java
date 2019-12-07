@@ -13,5 +13,5 @@ import java.util.List;
 public interface EmotionDao {
         @Select("select * where e_id = #{context}")
 //        Emotion emotion(@Param("context")String context);
-        public Emotion gete_id(int context);
+        Emotion gete_id(int context);
 }
