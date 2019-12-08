@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var book;
+    book = new Vue({
+        el:"#bookSearch",
+        data:{
+            emotion:$("#Search_box").val()
+        },
+        methods:{
+            getemotion:function () {
+                console.log("getemotion");
+                var that = this;
+                var param = {"emotion":"挑衅"}
+                axios.get("http://127.0.0.1:8888/emotion",param).then(function (response) {
+                    that.emotion = response.data;
+                    alert(that.emotion)
+                })
+            }
+        }
+    })
+</script>
+
+<!--<script type="text/javascript" src="js/bookSearch.js"></script>-->
+<script type="text/javascript" src="css/style.css"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</body>
+</html>

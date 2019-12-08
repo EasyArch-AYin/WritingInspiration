@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 @Mapper
 public interface EmotionDao {
-        @Select("select * where e_id = #{context}")
+        @Select("select id from emotion where e_id = #{emotion}")
 //        Emotion emotion(@Param("context")String context);
-        Emotion gete_id(int context);
+        Emotion gete_id(String emotion);
 }
