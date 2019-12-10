@@ -6,10 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 import writinginspiration.es.ESDao;
 import writinginspiration.es.ESpojo;
 
 import java.util.List;
+
+@RestController
 class ESDaoimpl {
     @Autowired
     ESDao esDao;
