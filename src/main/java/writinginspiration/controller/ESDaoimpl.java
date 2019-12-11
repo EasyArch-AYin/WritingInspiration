@@ -5,19 +5,23 @@ import org.apache.ibatis.annotations.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import writinginspiration.es.ESDao;
 import writinginspiration.es.ESpojo;
 
+import java.util.ArrayList;
 import java.util.List;
 
-@RestController
+//@RestController
 class ESDaoimpl {
     @Autowired
     ESDao esDao;
 
     List getEmotion(String param){
-        return esDao.findByEmotionLike(param);
+        List EmotionList = new ArrayList();
+        EmotionList.addAll(esDao.findByEmotionLike(param));
+        return EmotionList;
     }
 }

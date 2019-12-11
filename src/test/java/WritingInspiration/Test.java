@@ -25,10 +25,8 @@ public class Test {
     @org.junit.Test
     public void test(){
         for (ESpojo espojo : esDao.findByEmotionLike("挑")) {
-            System.out.println(espojo);
+            System.out.println(espojo.getEmotion());
         }
-//        ESpojo eSpojo = new ESpojo();
-//        esDao.index(eSpojo);
     }
 
     @org.junit.Test
