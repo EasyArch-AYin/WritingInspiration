@@ -21,7 +21,7 @@ var 函数名称 = function(参数列表){
     <a id="search_button"><button onclick="f()">搜索</button></a>
 </div>
 </div>
-
+<div id="xxx"></div>
 <script>
     function f() {
         var emotion = $("#Search_box").val();
@@ -32,18 +32,20 @@ var 函数名称 = function(参数列表){
             data:{"emotion":emotion},
             datatype:"json",
             success:function (data) {
-                $.ajax({
-                    type:"POST",
-                    url:"/title",
-                    async:true,
-                    data:{"title":data},
-                    datatype:"json",success:function (response) {
-                        alert(response);
-                    },
-                    error:function () {
-                        alert("完球了，错了");
-                    }
-                })
+                alert(data);
+                // $.ajax({
+                //     type:"POST",
+                //     url:"/title",
+                //     async:true,
+                //     data:{"title":data.stringify()},
+                //     datatype:"json",
+                //     success:function (response) {
+                //         alert(response);
+                //     },
+                //     error:function () {
+                //         alert("完球了，错了");
+                //     }
+                // })
             },
             error:function () {
                 alert("完求，错了");

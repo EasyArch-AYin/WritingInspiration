@@ -3,18 +3,21 @@ package writinginspiration.controller;
 import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import writinginspiration.dao.ArticleDao;
 import writinginspiration.dao.EmotionDao;
 import writinginspiration.es.ESDao;
 import writinginspiration.es.ESpojo;
+import writinginspiration.pojo.Article;
 import writinginspiration.pojo.Emotion;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 @RestController
 public class EmotionDaoimpl {
+    @Autowired
+    ArticleDao articleDao;
 
     @Autowired
     EmotionDao emotionDao;
@@ -25,7 +28,7 @@ public class EmotionDaoimpl {
 
     @PostMapping("/emotion")
 //        获取传来json中的emotion
-    public List getemotion(@RequestBody String json) throws UnsupportedEncodingException {
+    public String getemotion(@RequestBody String json) throws UnsupportedEncodingException {
 //        ESDaoimpl esDaoimpl = new ESDaoimpl();
         //        新创建一个List用于存放查询到的e_id
         List EIDList = new ArrayList();;
@@ -47,6 +50,8 @@ public class EmotionDaoimpl {
                 EIDList.add(EID);
             }
         }
-        return EIDList;
+
+//        return EIDList;
+        return articleDao.getTitle((Integer) EIDList.get(0)).getTitle();
     }
 }

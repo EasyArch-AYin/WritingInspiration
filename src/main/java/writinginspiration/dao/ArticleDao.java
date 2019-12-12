@@ -11,5 +11,5 @@ import java.util.List;
 @Mapper
 public interface ArticleDao {
     @Select("select title from article where e_id=#{e_id}")
-    String getTitle(int e_id);
+    Article getTitle(int e_id);
 }
