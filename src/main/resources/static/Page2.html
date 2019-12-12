@@ -6,31 +6,47 @@
 </head>
 <body>
 
+<div id="TopSearch" align="center">
+    <div id="TopSearch_Box">
+        <input type="text" id="Search_Box" autocomplete="off">
+        <button>搜索</button>
+    </div>
+</div>
+<div id="LeftEmotionList" align="left">
+    <nav id="nav" class="">
+        <div class="emotionList">
+            <ul>
+                <li>
+                    <a href="#">a</a>
+                </li>
+                <li>
+                    <a href="#">b</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div id="CenterContent" align="center">
+    <div id="label">文章内容如下</div>
+    <h1 id="content"></h1>
+</div>
+<div id="RightPrepareContent" align="right">
+    <div id="RightLabel">也可以看这些</div>
+    <h1 id="PrePareContent"></h1>
+</div>
+
 <script>
-    var book;
-    book = new Vue({
-        el:"#bookSearch",
-        data:{
-            emotion:$("#Search_box").val()
-        },
-        methods:{
-            getemotion:function () {
-                console.log("getemotion");
-                var that = this;
-                var param = {"emotion":"挑衅"}
-                axios.get("http://127.0.0.1:8888/emotion",param).then(function (response) {
-                    that.emotion = response.data;
-                    alert(that.emotion)
-                })
-            }
-        }
-    })
+var url = location.search;
+var loc = decodeURI(url)
+var emotion = loc.substring(loc.lastIndexOf('=')+1, loc.length);
+
+alert(emotion)
 </script>
 
 <!--<script type="text/javascript" src="js/bookSearch.js"></script>-->
-<script type="text/javascript" src="css/style.css"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script type="text/javascript" src="js/vue.js"></script>
-
+<!--<script type="text/javascript" src="css/style.css"></script>-->
+<!--<script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
+<!--<script type="text/javascript" src="js/vue.js"></script>-->
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
 </body>
 </html>

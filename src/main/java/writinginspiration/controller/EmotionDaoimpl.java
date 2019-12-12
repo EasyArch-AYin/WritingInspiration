@@ -25,7 +25,6 @@ public class EmotionDaoimpl {
     @Autowired
     ESDao esDao;
 
-
     @PostMapping("/emotion")
 //        获取传来json中的emotion
     public String getemotion(@RequestBody String json) throws UnsupportedEncodingException {
@@ -42,6 +41,8 @@ public class EmotionDaoimpl {
 //        List EmotionList = esDaoimpl.getEmotion(emotion);
 //        对每一个EmotionList中的字都在数据库中查询
         for (ESpojo eSpojo : esDao.findByEmotionLike(emotion)) {
+
+
 //        从数据库中得到emotion对应的e_id
             Emotion E_ID = emotionDao.gete_id(eSpojo.getEmotion());
             if (E_ID != null) {
