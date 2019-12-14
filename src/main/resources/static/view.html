@@ -28,25 +28,17 @@
 </div>
 <div id="CenterContent" align="center">
     <div id="label">文章内容如下</div>
-    <h1 id="content"></h1>
+    <div id="content1"></div>
+    <div id="content2"></div>
 </div>
 <div id="RightPrepareContent" align="right">
     <div id="RightLabel">也可以看这些</div>
     <h1 id="PrePareContent"></h1>
 </div>
 
-<script>
-var url = location.search;
-var loc = decodeURI(url)
-var emotion = loc.substring(loc.lastIndexOf('=')+1, loc.length);
 
-alert(emotion)
-</script>
 
-<!--<script type="text/javascript" src="js/bookSearch.js"></script>-->
-<!--<script type="text/javascript" src="css/style.css"></script>-->
-<!--<script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
-<!--<script type="text/javascript" src="js/vue.js"></script>-->
-<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script src="js/jquery-1.7.2.js"></script>
+<script src="js/bookSearch.js"></script>
 </body>
 </html>

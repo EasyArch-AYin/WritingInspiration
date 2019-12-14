@@ -18,46 +18,18 @@ var 函数名称 = function(参数列表){
 <input id="Search_box" type="text" autocomplete="off" name="Search" style="width: 50%">
 </div>
 <div class="bookSearch2" id="bookSearch2">
-    <a id="search_button" href="#"><button onclick="f()">搜索</button></a>
+    <a id="search_button" href="#"><button onclick="ChangePage()">搜索</button></a>
 </div>
 </div>
 <div id="xxx"></div>
 <script>
-    function f() {
+    function ChangePage() {
         var emotion = $("#Search_box").val();
-        $.ajax({
-            type:"POST",
-            url:"/emotion",
-            async:true,
-            data:{"emotion":emotion},
-            datatype:"json",
-            success:function (data) {
-                document.location.href = "Page2.html?emotion="+data;
-                // $.ajax({
-                //     type:"POST",
-                //     url:"/title",
-                //     async:true,
-                //     data:{"title":data.stringify()},
-                //     datatype:"json",
-                //     success:function (response) {
-                //         alert(response);
-                //     },
-                //     error:function () {
-                //         alert("完球了，错了");
-                //     }
-                // })
-            },
-            error:function () {
-                alert("完求，错了");
-            }
-        })
+        document.location.href = "view.html?emotion="+emotion;
     }
 </script>
 
 <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
-<!--<script type="text/javascript" src="js/bookSearch.js"></script>-->
-<!--<script type="text/javascript" src="css/style.css"></script>-->
-<!--<script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
 
 </body>
 </html>

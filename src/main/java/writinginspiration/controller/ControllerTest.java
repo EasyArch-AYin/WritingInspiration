@@ -14,8 +14,10 @@ public class ControllerTest {
 
     @PostMapping("/test")
     public Object getJSON(@RequestBody String json) throws UnsupportedEncodingException {
-        String emotionLIST[] = json.split("=");
-        String emotion= URLDecoder.decode(emotionLIST[1],"utf-8");
+//        String emotionLIST[] = json.split("=");
+//        String emotion= URLDecoder.decode(emotionLIST[1],"utf-8");
+        String[] emotionLIST = json.split("=");
+        String emotion = URLDecoder.decode(emotionLIST[1], "utf-8");
         return emotion;
     }
 }
