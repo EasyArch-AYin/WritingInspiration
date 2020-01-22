@@ -1,0 +1,19 @@
+#TopSearch_Box {
+    height: 100px;
+    background-color: #f1edf1;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+#Search_Box {
+    width: 40%;
+    height: 20px;
+    margin-top: 50px;
+}
+
+#LeftEmotionList {
+    background-color: #f1edf1;
+    float: left;
+    width: 30%;
+}

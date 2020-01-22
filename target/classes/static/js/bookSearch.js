@@ -17,7 +17,7 @@ window.onload=function LoadData() {
         data:{"emotion":emotion},
         datatype:"json",
         success:function (response) {
-
+            response.forEach(aaa)
         },
         error:function () {
             alert("完求，错了");
@@ -25,4 +25,7 @@ window.onload=function LoadData() {
     })
 };
 
+function aaa(item,index) {
+    alert(item)
+}
 
