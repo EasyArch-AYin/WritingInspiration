@@ -20,7 +20,7 @@ window.onload=function LoadData() {
 
         },
         error:function () {
-            alert("完求，错了");
+            alert("错了");
         }
     })
 };
