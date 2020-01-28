@@ -17,15 +17,15 @@ window.onload=function LoadData() {
         data:{"emotion":emotion},
         datatype:"json",
         success:function (response) {
-            response.forEach(aaa)
+            if (response){
+                var result = eval(response);
+                console.log(result.content.toString());
+                console.log(result.emotions.toString());
+
+            }
         },
         error:function () {
-            alert("完求，错了");
+            alert("错了");
         }
     })
 };
-
-function aaa(item,index) {
-    alert(item)
-}
-
