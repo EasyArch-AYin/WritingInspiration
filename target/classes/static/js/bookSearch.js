@@ -19,9 +19,9 @@ window.onload=function LoadData() {
         success:function (response) {
             if (response){
                 var result = eval(response);
-                console.log(result.content.toString());
-                console.log(result.emotions.toString());
-
+                DATA.ContentList = result.content;
+                DATA.EmotionList = result.emotions;
+                console.log(DATA.EmotionList)
             }
         },
         error:function () {
